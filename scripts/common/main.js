@@ -1,7 +1,7 @@
-jQuery( document ).ready(function( $ ) {
-	// Make an instance of two and place it on the page.
+var preguntasLink = "/common/mockPreguntas.json";
 
-
-
+$( document ).ready(function() {
+	$.getJSON(preguntasLink, function(result){
+		console.log(result);
+	});
 });
-

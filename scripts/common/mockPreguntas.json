@@ -1,0 +1,16 @@
+{
+	"Preguntas":[
+		{
+			"ID": 1,
+			"Title": "Pregunta 1",
+			"Description": "¿Cuál de las siguientes opciones es la respuesta a la operación 2+2?",
+			"Responses": [{"option": "A","text": "2"},{"option": "B","text": "4"},{"option": "C","text": "8"},{"option": "D","text": "16"}]
+		},	
+		{
+			"ID": 2,
+			"Title": "Pregunta 2",
+			"Description": "¿Cuál de las siguientes opciones es la respuesta a la operación 10-4?",
+			"Responses": [{"option": "A","text": "2"},{"option": "B","text": "4"},{"option": "C","text": "6"},{"option": "D","text": "22"}]
+		}
+	]	
+}
