@@ -7,7 +7,7 @@ var express = require("express");
 //put the folders in the server 
 app.use(express.static(__dirname + '/scripts'));
 //app.use(express.static(__dirname + '/img'));
-//app.use(express.static(__dirname + '/css'));
+app.use(express.static(__dirname + '/css'));
 //app.use(express.static(__dirname + '/fonts'));
 
 
