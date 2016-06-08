@@ -4,8 +4,7 @@
 	<title>SABER prototype</title>
   	
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    
-    <link href="/stylus.css" rel="stylesheet">
+
 
 
 </head>
@@ -16,7 +15,7 @@
 			<div class="page-header">
 			  <h1>Saber prototype <small>node.js powered</small></h1>
 			</div>
-			
+			<div ng-include="'views/menu.htm'"></div>
 			<div ng-view=""></div>
 
 		</div>
@@ -41,10 +40,8 @@
     <script src="route/route.js"></script>
     
     <script src="controllers/homeController.js"></script>
+    <script src="controllers/menuController.js"></script>
     <script src="controllers/preguntaSimpleController.js"></script>
-    <script src="controllers/diligenciarController.js"></script>
-    <script src="controllers/resultadosController.js"></script>
-    <script src="controllers/ayudaController.js"></script>
 
 
 </body>
