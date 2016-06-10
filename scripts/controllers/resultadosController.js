@@ -7,7 +7,8 @@
 
     resultadosController.$inject = [ '$scope'];
     function resultadosController($scope) {
-
+    
+    $('#example').DataTable();
 
     }
 

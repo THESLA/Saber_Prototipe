@@ -4,14 +4,16 @@
 	<title>SABER prototype</title>
   	
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/stylus.css">
+    <link rel="stylesheet" href="styles/jquery.dataTables.min.css">
+
     
-    <link rel="stylesheet" href="stylus.css">
 
 
 </head>
 <body ng-app="saber_prot">
 
-	<div class="container">
+	<div class="container" dir="cuerpo">
 		<div class="row">
 			<div class="page-header">
 			  <h1>Saber prototype <small>node.js powered</small></h1>
@@ -39,6 +41,7 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/jquery-ui/jquery-ui.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
     <!-- endbower -->
 	<script src="common/common.services.js"></script>
     <script src="common/resource.services.js"></script>
@@ -49,7 +52,9 @@
     <script src="controllers/homeController.js"></script>
     <script src="controllers/menuController.js"></script>
     <script src="controllers/preguntaSimpleController.js"></script>
-
+    <script src="controllers/resultadosController.js"></script>
+    <script src="controllers/ayudaController.js"></script>
+    <script src="controllers/diligenciarController.js"></script>
 
 </body>
 </html>
