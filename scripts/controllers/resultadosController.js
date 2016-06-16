@@ -33,7 +33,7 @@ $(document).ready(function() {
             { title: "Grado" },
             { title: "ID" },
             { title: "Edad" },
-            { title: "telefono" },
+            { title: "Telefono" },
         ]
     } );
 } );

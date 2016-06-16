@@ -32,7 +32,19 @@
             controller: 'ayudaController',
             controllerAs: 'vm',
             caseInsensitiveMatch: true
-        });    
+        }); 
+        $routeProvider.when('/graficas', {
+            templateUrl: 'views/graficas.htm',
+            controller: 'graficasController',
+            controllerAs: 'vm',
+            caseInsensitiveMatch: true
+        }); 
+        $routeProvider.when('/pdf', {
+            templateUrl: 'views/pdf.htm',
+            controller: 'pdfController',
+            controllerAs: 'vm',
+            caseInsensitiveMatch: true
+        });  
         $routeProvider.otherwise({
             redirectTo: '/home'
             //redirectTo: '/welcome'

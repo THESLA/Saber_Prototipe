@@ -1,0 +1,31 @@
+<div>
+	<h5 class="breadcrumb">Resulatados/PDF</h5>
+	<hr class="half-rule">
+
+    <h2 >Descarga Tus resultados</h2>
+    <p class="lead">Descarga aqui todas tus notas en un archivo PDF, el cual puedes llevar a todas partes.</p>
+
+	<hr class="half-rule">
+	<button class="btn btn-default" onclick="generate()">Generate pdf</button>
+	
+	<script>
+    function generate() {
+        var columns = ["#", "Name", "Grado", "ID", "Edad","Telefono"];
+        var data = [
+                [ "1","Tiger Nixon", "6To", "000000000", "12", "313243634x" ],
+    			[ "2","Pedro Shause", "6To", "000000001", "14", "313243634x" ],
+    			[ "3","Ramon Martinez", "6To", "000000002", "15", "313243634x" ],
+    			[ "4","Magda Sarate", "6To", "000000003", "17", "313243634x" ],
+    			[ "5","Dario Ramos", "6To", "000000004", "13", "313243634x" ],
+    			[ "6","Victor Blash", "6To", "000000005", "15", "313243634x" ],
+    			[ "7","BlashT Rita", "5To", "000000006", "13", "313243634x" ],
+    			[ "8","Tirion Lanister", "3Ro", "000000007", "11", "313243634x" ],
+    			[ "9","Samsa Satark", "2Do", "000000008", "15", "313243634x" ],
+        ];
+
+        var doc = new jsPDF('p', 'pt');
+        doc.autoTable(columns, data);
+        doc.save("table.pdf");
+    }
+	</script>
+</div>
