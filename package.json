@@ -1,7 +1,9 @@
 {
   "name": "angularscaffolding",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "chart.js": "^2.1.6"
+  },
   "repository": {},
   "devDependencies": {
     "grunt": "^0.4.5",

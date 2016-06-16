@@ -7,6 +7,8 @@
 
     resultadosController.$inject = [ '$scope'];
     function resultadosController($scope) {
+
+        
     
     var dataSet = [
     [ "1","Tiger Nixon", "6To", "000000000", "12", "313243634x" ],
