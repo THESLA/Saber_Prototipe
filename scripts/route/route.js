@@ -38,12 +38,6 @@
             controller: 'graficasController',
             controllerAs: 'vm',
             caseInsensitiveMatch: true
-        }); 
-        $routeProvider.when('/pdf', {
-            templateUrl: 'views/pdf.htm',
-            controller: 'pdfController',
-            controllerAs: 'vm',
-            caseInsensitiveMatch: true
         });  
         $routeProvider.otherwise({
             redirectTo: '/home'
