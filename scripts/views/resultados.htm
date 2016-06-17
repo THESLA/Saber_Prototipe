@@ -6,11 +6,68 @@
     <p class="lead">Busca y Descarga aqui todas tus notas en un archivo PDF, el cual puedes llevar a todas partes.</p>
 
 	<hr class="half-rule">
-	<div id="trabe"><table class="table table-hover" id="example" class="display" width="100%"></table></div>
+	<div class="table-responsive" id="trabe"><table class="table table-hover" id="example" class="display nowrap dataTable dtr-inline collapsed" width="100%"></table></div>
 
 	<hr class="half-rule">
-	<div class="col-md-6 col-md-offset-5"> <button class="btn btn-info" onclick="generate()"> Descargar PDF</button></div>
+    <div class="row">
+            <div class="col-md-2 col-md-offset-4 col-xs-offset-3 col-xs-3" > <button class="btn btn-info" onclick="generate()"> Descargar PDF</button></div>
+            <div class="col-md-2 col-xs-3"> <button class="btn btn-info" onclick="descarga()"> Descargar SVF</button>
+            </div>
+    </div>
+
 	
+    <script>
+    function descarga(){
+
+        var data = [
+                ["#", "Name", "Grado", "ID", "Edad","Telefono"],
+                [ "1","Tiger Nixon", "6To", "000000000", "12", "313243634x" ],
+                [ "2","Pedro Shause", "6To", "000000001", "14", "313243634x" ],
+                [ "3","Ramon Martinez", "6To", "000000002", "15", "313243634x" ],
+                [ "4","Magda Sarate", "6To", "000000003", "17", "313243634x" ],
+                [ "5","Dario Ramos", "6To", "000000004", "13", "313243634x" ],
+                [ "6","Victor Blash", "6To", "000000005", "15", "313243634x" ],
+                [ "7","BlashT Rita", "5To", "000000006", "13", "313243634x" ],
+                [ "8","Tirion Lanister", "3Ro", "000000007", "11", "313243634x" ],
+                [ "9","Samsa Satark", "2Do", "000000008", "15", "313243634x" ],
+        ];
+
+    var csvContent = '';
+    data.forEach(function (infoArray, index) {
+    dataString = infoArray.join(';');
+    csvContent += index < data.length ? dataString + '\n' : dataString;
+    });
+
+    var download = function(content, fileName, mimeType) {
+    var a = document.createElement('a');
+    mimeType = mimeType || 'application/octet-stream';
+
+    if (navigator.msSaveBlob) { // IE10
+    return navigator.msSaveBlob(new Blob([content], { type: mimeType }), fileName);
+    } else if ('download' in a) { //html5 A[download]
+    a.href = 'data:' + mimeType + ',' + encodeURIComponent(content);
+    a.setAttribute('download', fileName);
+    document.body.appendChild(a);
+    setTimeout(function() {
+      a.click();
+      document.body.removeChild(a);
+    }, 66);
+    return true;
+    } else { //do iframe dataURL download (old ch+FF):
+    var f = document.createElement('iframe');
+    document.body.appendChild(f);
+    f.src = 'data:' + mimeType + ',' + encodeURIComponent(content);
+
+    setTimeout(function() {
+      document.body.removeChild(f);
+    }, 333);
+    return true;
+    }
+    }
+
+    download(csvContent, 'csv file.csv', 'text/csv');
+    }
+    </script>
 	
 	<script>
     function generate() {
@@ -32,6 +89,10 @@
         doc.save("table.pdf");
     }
 	</script>
+    
+    <script>
+
+    </script>
 	
     
 </div>
