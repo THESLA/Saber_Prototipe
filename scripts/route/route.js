@@ -45,6 +45,12 @@
             controllerAs: 'vm',
             caseInsensitiveMatch: true
         }); 
+        $routeProvider.when('/registrar', {
+            templateUrl: 'views/registrar.htm',
+            controller: 'registrarController',
+            controllerAs: 'vm',
+            caseInsensitiveMatch: true
+        }); 
         $routeProvider.otherwise({
             redirectTo: '/home'
             //redirectTo: '/welcome'
