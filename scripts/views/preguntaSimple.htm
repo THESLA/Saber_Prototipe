@@ -1,13 +1,12 @@
 <div class="panel panel-default panel-primary">
     <div class="panel-heading">
-        <h3 class="panel-title">{{preguntaUno}}</h3>
+        <h3 class="panel-title">{{pregunta.tituloPregunta}}</h3>
     </div>
     <div class="panel-body">
         <div class="input-group">
-            <input type="radio" name="respuesta" value="A"> Respuesta A<br>
-            <input type="radio" name="respuesta" value="B"> Respuesta B<br>
-            <input type="radio" name="respuesta" value="C"> Respuesta C<br>
-            <input type="radio" name="respuesta" value="D"> Respuesta D<br>
+            <div ng-repeat="x in pregunta.respuestas">
+                <input type="radio" name="respuesta" value="{{x.idRes}}" >  {{x.res}}<br>
+            </div>
         </div>
     </div>
     <div class="panel-footer">
@@ -21,4 +20,12 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="col-md-3 col-ls-3">
+    <div class="form-group">
+        <input type="number" min="0" class="form-control" placeholder="ID pregunta" ng-model="idPregunta">
+    </div>
+    <button type="button" class="btn btn-success" ng-click="getPregunta()">Traer pregunta</button>
+    
 </div>

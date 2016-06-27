@@ -1,13 +1,14 @@
 (function () {
     "use strict";
     var services = angular.module('common.services').factory("appSettings", ['ngResource', 'ngRoute', '$http']);
-
+    /*
     services.factory("Producto", function ($resource, appSettings) {
         return $resource(appSettings.serverPath + "/api/producto/:id", null,
              {
                  'update': { method: 'PUT' }
              });
     });
+    
     services.factory("Customers", function ($resource, appSettings) {
         return $resource(null, {}, {
             query: { method: 'GET', params: {}, isArray: true, url: appSettings.serverPath + "/api/customer" },
@@ -19,4 +20,14 @@
             todos: { method: 'GET', params: {}, isArray: true, url: appSettings.serverPath + "/api/customer" }
         });
     })
+    */
+    
+    services.factory("Preguntas", function ($resource, appSettings) {
+        return $resource(null, {}, {
+            obtenerPregunta: {
+                method: 'POST', url: appSettings.serverPath + "/api/Preguntas/ObtenerPregunta"
+            }
+        });
+    })
+    
 }());

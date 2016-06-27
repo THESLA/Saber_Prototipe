@@ -3,7 +3,7 @@ var app = null;
     "use strict";
 
     app = angular.module("saber_prot",
-                            ['ngRoute', 'ngCookies']);
+                            ["common.services",'ngRoute', 'ngCookies']);
 
 
 }());
