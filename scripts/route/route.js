@@ -39,6 +39,12 @@
             controllerAs: 'vm',
             caseInsensitiveMatch: true
         });  
+        $routeProvider.when('/login', {
+            templateUrl: 'views/login.htm',
+            controller: 'loginController',
+            controllerAs: 'vm',
+            caseInsensitiveMatch: true
+        }); 
         $routeProvider.otherwise({
             redirectTo: '/home'
             //redirectTo: '/welcome'
